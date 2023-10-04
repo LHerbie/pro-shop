@@ -1,11 +1,19 @@
 import { Button, Container, Paper, Typography } from '@mui/material';
 import logo from './../../logo.svg';
 import './App.css';
+import MenuBar from '../MenuBar.js'
+import Dashboard from '../Dashboard';
 
 function App() {
   return (
-    <Container maxWidth="sm" className="App">
+    <Container maxWidth="lg" className="App">
+      <MenuBar></MenuBar>
       <Paper>
+
+      <Typography variant="h4" component="h1" gutterBottom>
+          Create React App + Material-UI
+        </Typography>
+      <Dashboard></Dashboard>
         <img src = {logo}className="App-logo" alt="logo" />
         <Typography variant="h4" component="h1" gutterBottom>
           Create React App + Material-UI
