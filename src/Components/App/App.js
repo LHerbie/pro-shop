@@ -1,8 +1,10 @@
-import { AppBar, Drawer, IconButton, ListItem, ListItemIcon, ListItemText, Toolbar } from '@mui/material';
+import { AppBar, Drawer, IconButton, ListItemButton, ListItemIcon, ListItemText, Toolbar } from '@mui/material';
 import './App.css';
 import Dashboard from '../Dashboard';
 import { Backpack, Checkroom, DashboardOutlined, DensityMedium, DoNotStep, Inventory, SportsTennis, Workspaces } from '@mui/icons-material';
 import { useState } from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import AllItems from '../AllItems';
 
 const data = [
   { name: "Dashboard", icon: <DashboardOutlined />, },
@@ -20,10 +22,10 @@ function App() {
   const getList = () => (
     <div style={{ width: 250 }} onClick={() => setOpen(false)}>
       {data.map((item, index) => (
-        <ListItem button key={index}>
+        <ListItemButton key={index}>
           <ListItemIcon>{item.icon}</ListItemIcon>
           <ListItemText primary={item.name} />
-        </ListItem>
+        </ListItemButton>
       ))}
     </div>
   );
@@ -37,11 +39,17 @@ function App() {
           Dashboard
         </Toolbar>
       </AppBar>
-      <Dashboard></Dashboard>
+      {/* <Dashboard></Dashboard> */}
       <Drawer open={open} anchor={"left"} onClose={() => setOpen(false)}>
         <br></br>
         {getList()}
       </Drawer>
+      <BrowserRouter>
+        <Routes>
+            <Route path='/' element={<Dashboard/>}></Route>
+            <Route path='/AllItems' element={<AllItems/>}></Route>
+        </Routes>
+    </BrowserRouter>
     </div>
   );
 }

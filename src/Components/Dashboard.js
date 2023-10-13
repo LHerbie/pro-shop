@@ -1,5 +1,6 @@
 import { CardContent, CardActions, Button, Card, Typography, Box, Grid } from "@mui/material";
-import { PieChart, BarChart } from "@mui/x-charts";
+import { BarChart } from "@mui/x-charts";
+import { Link } from 'react-router-dom';
 
 export default function Dashboard() {
     return (
@@ -32,7 +33,7 @@ export default function Dashboard() {
                      </Typography>
                 </CardContent>
                 <CardActions>
-                    <Button size="small">See more</Button>
+                    <Button component={Link} to={'/AllItems'} size="small">See more</Button>
                 </CardActions> 
             </Card>
         </Grid>
