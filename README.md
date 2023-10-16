@@ -1,3 +1,52 @@
+# Running the Application
+
+Clone the backend API project to your local machine:
+
+```
+git clone https://github.com/LHerbie/ProShop.git
+```
+
+Make sure you are on the dev branch:
+
+```
+git switch dev
+```
+
+Navigate to the `./pro-shop` directory.
+
+Run the backend:
+
+```
+dotnet run --project ./ProShop.API/ProShop.API.csproj
+```
+
+Clone the frontend repository to your local machine:
+
+```
+git clone https://github.com/LHerbie/pro-shop.git
+```
+
+Make sure you are on the dev branch:
+
+```
+git switch dev
+```
+
+Navigate to the `./pro-shop` directory.
+
+Run the frontend project
+
+```
+npm install
+npm start
+```
+
+Navigate to `http://localhost:3000/` (frontend) in one tab, and to `http://localhost:5226/swagger/index.html` (backend) in another.
+
+Add a new category, and then a new item using your new category in the backend.
+
+Switch to the frontend tab and you will see your new item displayed at the bottom of the page.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

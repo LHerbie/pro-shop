@@ -1,6 +1,7 @@
 import { CardContent, CardActions, Button, Card, Typography, Box, Grid } from "@mui/material";
 import { BarChart } from "@mui/x-charts";
 import { Link } from 'react-router-dom';
+import AllItems from "./AllItems";
 
 export default function Dashboard() {
     return (
@@ -113,6 +114,7 @@ export default function Dashboard() {
             </Card>
         </Grid> 
     </Grid>
+    <AllItems></AllItems>
     </Box>
     )
 }
